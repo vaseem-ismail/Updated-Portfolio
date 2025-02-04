@@ -1,0 +1,320 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.header img {
+    border-radius: 30%;
+    
+}
+
+.main {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.light {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tina {
+    font-size: 32px;
+    font-weight: bold;
+    color: red;
+}
+
+.normal {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button-container button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.button-container button:hover {
+    background-color: darkred;
+}
+
+/* Navbar */
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.nav {
+    background-color: #000000;
+    /* Black */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: red;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* About Me Section */
+.nirom {
+    padding: 150px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.about img {
+    border-radius: 10px;
+}
+
+.para {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Skills Section */
+.skills {
+    padding: 150px;
+}
+
+.skillset {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.wh {
+    background-color: #222;
+    padding: 20px;
+    margin: 40px;
+    gap: 20px;
+    row-gap: 40px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.wh0 {
+    width: 100%;
+    background: #444;
+    height: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.wh1{
+    background-color: red;
+    height:50px;
+    width: 60%;
+}
+.wh2{
+    background-color: red;
+    height:50px;
+    width: 60%;
+}
+.wh3{
+    background-color: red;
+    height:50px;
+    width: 60%;
+}
+.wh4{
+    background-color: red;
+    height:50px;
+    width: 60%;
+}
+.wh5{
+    background-color: red;
+    height:50px;
+    width: 60%;
+}
+.wh6 {
+    background: red;
+    height: 50px;
+    width: 50%;
+}
+
+/* Life Skills Section */
+.life-skills{
+    padding: 150px;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.english-skill {
+    background: #222;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Hobbies Section */
+#hobbies{
+    padding: 150px;
+}
+.hobby-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.hobby-item img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.hobby-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Projects Section */
+.project{
+    padding:150px;
+}
+.project1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+.gap img {
+    border-radius: 10px;
+    transition: transform 0.3s;
+    border: 2px white solid;
+    margin: 10px;
+}
+
+.gap img:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: #222;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: darkred;
+}
