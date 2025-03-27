@@ -179,32 +179,37 @@ nav a:hover::after {
 .wh1{
     background-color: red;
     height:50px;
-    width: 60%;
+    width: 100%;
 }
 .wh2{
     background-color: red;
     height:50px;
-    width: 60%;
+    width: 75%;
 }
 .wh3{
     background-color: red;
     height:50px;
-    width: 60%;
+    width: 90%;
 }
 .wh4{
     background-color: red;
     height:50px;
-    width: 60%;
+    width: 95%;
 }
 .wh5{
     background-color: red;
     height:50px;
-    width: 60%;
+    width: 90%;
 }
 .wh6 {
     background: red;
     height: 50px;
-    width: 50%;
+    width: 80%;
+}
+.wh7 {
+    background: red;
+    height: 50px;
+    width: 40%;
 }
 
 /* Life Skills Section */
