@@ -52,17 +52,51 @@ body {
 }
 
 .button-container button {
-    background-color: red;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
     color: white;
+    background: linear-gradient(90deg, #ff5733, #ffbd69);
+    padding: 12px 30px;
     border: none;
-    padding: 10px 15px;
-    margin: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.4);
 }
 
-.button-container button:hover {
-    background-color: darkred;
+/* Glowing Border Animation */
+.button::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    top: -50%;
+    left: -50%;
+    background: linear-gradient(90deg, rgba(255, 87, 51, 0.8), rgba(255, 189, 105, 0.8));
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    border-radius: 50px;
+    animation: glowing 1.5s infinite alternate;
+}
+
+/* Hover Glowing Effect */
+.button:hover::before {
+    opacity: 1;
+}
+
+/* Keyframes for Glowing Animation */
+@keyframes glowing {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 87, 51, 0.6);
+    }
+    100% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 87, 51, 0.8);
+    }
 }
 
 /* Navbar */
@@ -91,6 +125,113 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
+.topic>h2 {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-weight: 600;
+    letter-spacing: 4px;
+    overflow: hidden;
+  }
+  .topic>h2:hover {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff, 0 0 200px #fff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  }
+  
+  .topic>h2 span {
+    position: absolute;
+    display: block;
+  }
+  
+  .topic>h2 span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(90deg, transparent, #fff);
+    animation: animate1 1s linear infinite;
+  }
+  
+  @keyframes animate1 {
+    0% {
+      left: -100%;
+    }
+    50%,
+    100% {
+      left: 100%;
+    }
+  }
+  
+  .topic>h2 span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+  }
+  
+  @keyframes animate2 {
+    0% {
+      top: -100%;
+    }
+    50%,
+    100% {
+      top: 100%;
+    }
+  }
+  
+  .topic>h2 span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 10px;
+    background: linear-gradient(270deg, transparent, #fff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes animate3 {
+    0% {
+      right: -100%;
+    }
+    50%,
+    100% {
+      right: 100%;
+    }
+  }
+  
+  .topic>h2 span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+  }
+  
+  @keyframes animate4 {
+    0% {
+      bottom: -100%;
+    }
+    50%,
+    100% {
+      bottom: 100%;
+    }
+  }
+
+
+
 
 nav a {
     text-decoration: none;
@@ -211,6 +352,11 @@ nav a:hover::after {
     height: 50px;
     width: 40%;
 }
+.wh8 {
+    background: red;
+    height: 50px;
+    width: 35%;
+}
 
 /* Life Skills Section */
 .life-skills{
@@ -296,30 +442,79 @@ nav a:hover::after {
     gap: 10px;
 }
 
+/* Form Styling */
 .contact-form {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #ff5733, #ffbd69);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 400px;
+    gap: 15px;
+    margin: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Form Hover Effect */
+.contact-form:hover {
+    transform: scale(1.02);
+}
+
+/* Input and Textarea Styling */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
 }
 
-.contact-form button {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+/* Placeholder Effect */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #888;
     transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: darkred;
+/* Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: white;
+    border-left: 3px solid #ff5733;
+}
+
+/* Submit Button */
+.btn {
+    background: #ff5733;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Button Hover Effect */
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px;
+    }
+    .btn {
+        font-size: 16px;
+    }
 }
