@@ -357,6 +357,11 @@ nav a:hover::after {
     height: 50px;
     width: 35%;
 }
+.wh9{
+    background: red;
+    height: 50px;
+    width: 70%;
+}
 
 /* Life Skills Section */
 .life-skills{
